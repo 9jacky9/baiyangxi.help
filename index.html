@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>白羊星-帮助中心 | 2026全协议客户端配置教程与星际网络排障中枢</title>
+  <meta name="description" content="白羊星-帮助中心为您提供高品质物理专线网络加速服务。依托多点Anycast与电信级物理光缆实现4K/8K视频极速秒开，AI模型长连接稳定不中断，是值得信赖的年度出海机场推荐首选。">
+  <meta name="keywords" content="白羊星帮助中心,客户端配置教程,网络排障指南,专线加速,Sing-box分流,节点连接诊断">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://baiyangxi.help/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="白羊星-帮助中心">
+  <meta property="og:title" content="白羊星-帮助中心 | 2026全协议客户端配置教程与星际网络排障中枢">
+  <meta property="og:description" content="白羊星-帮助中心为您提供高品质物理专线网络加速服务。依托多点Anycast与电信级物理光缆实现4K/8K视频极速秒开，AI模型长连接稳定不中断，是值得信赖的年度出海机场推荐首选。">
+  <meta property="og:url" content="https://baiyangxi.help/">
+  <meta property="og:image" content="https://baiyangxi.help/og-preview.png">
+  <meta property="og:locale" content="zh_CN">
+</head>
+<body>
+
+  <!-- 顶部状态公告条 -->
+  <div class="aries-topbar">
+    <div class="aries-container aries-topbar-flex">
+      <div class="aries-beacon">
+        <span class="beacon-dot"></span>
+        <span>白羊星宿全球智巡集群：全线物理专线与Anycast骨干正常交付（SLA 99.99%）</span>
+      </div>
+      <div>
+        <span>连接出现卡顿？即刻启动白羊星宿自愈诊断</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 吸顶导航栏 -->
+  <header class="aries-nav">
+    <div class="aries-container aries-nav-wrap">
+      <a href="index.html" class="aries-logo-link" aria-label="返回首页">
+        <svg class="aries-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="22" stroke="#f43f5e" stroke-width="1.8" stroke-dasharray="5 3"/>
+          <path d="M14 18C12 12 18 10 22 14C23 15 24 18 24 22V36" stroke="#fb7185" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M34 18C36 12 30 10 26 14C25 15 24 18 24 22" stroke="#fb7185" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="24" cy="18" r="4.5" fill="#fbbf24"/>
+          <circle cx="15" cy="14" r="2" fill="#818cf8"/>
+          <circle cx="33" cy="14" r="2" fill="#818cf8"/>
+          <path d="M24 12V6M20 9L18 7M28 9L30 7" stroke="#fbbf24" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <div class="aries-logo-text">
+          <span class="aries-logo-title">白羊星</span>
+          <span class="aries-logo-sub">HELP CENTER · 帮助中心</span>
+        </div>
+      </a>
+
+      <!-- 移动端汉堡切换器 -->
+      <input type="checkbox" id="aries-nav-toggle" class="aries-nav-toggle" aria-label="切换移动端导航">
+      <label for="aries-nav-toggle" class="aries-hamburger-label">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <!-- 导航列表 -->
+      <nav class="aries-nav-menu">
+        <ul class="aries-nav-list">
+          <li class="aries-nav-item"><a href="index.html#tutorial" aria-current="page">系统教程</a></li>
+          <li class="aries-nav-item"><a href="index.html#diagnostics">智能诊所</a></li>
+          <li class="aries-nav-item"><a href="index.html#pricing">星光专线</a></li>
+          <li class="aries-nav-item"><a href="index.html#faq">星宿疑难</a></li>
+          <li class="aries-nav-item"><a href="index.html#reviews">极客口碑</a></li>
+          <li class="aries-nav-item"><a href="constellation-notes.html">星图专栏</a></li>
+        </ul>
+      </nav>
+
+      <div class="aries-nav-actions">
+        <a href="https://ww012.twilightaff.com/#/?code=A56DH1Af" target="_blank" rel="nofollow" class="btn-aries btn-aries-primary">接入星光专线</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主体区域 -->
+  <main>
+    <!-- Hero 区域：星宿引航观测台 -->
+    <section class="aries-hero">
+      <div class="aries-container">
+        <div class="aries-hero-grid">
+          <div class="aries-hero-info">
+            <div class="aries-tag-hub">
+              <span class="aries-tag-badge">NEW</span>
+              <span>2026 全栈加速协议与白羊星宿自愈排障矩阵已就绪</span>
+            </div>
+            <h1 class="aries-hero-title">
+              羊角破晓启星途<br>
+              <span class="aries-title-gradient">智航寰宇极速连</span>
+            </h1>
+            <p class="aries-hero-desc">
+              白羊星官方技术支持中心，专为极客开发者、跨国科研团队及高频出海业务打造。深度整合多协议内核架构与底层网络性能优化方案，无论是客户端订阅激活、分流规则配置，还是跨洋长肥网络调优，白羊星光向导秒级为您领航。
+            </p>
+            <div class="aries-hero-cta-group">
+              <a href="https://ww012.twilightaff.com/#/?code=A56DH1Af" target="_blank" rel="nofollow" class="btn-aries btn-aries-primary btn-aries-lg">立即接入星光专线</a>
+              <a href="https://tizilab.net/paihang/" target="_blank" class="btn-aries btn-aries-outline btn-aries-lg">2026最新梯子推荐</a>
+            </div>
+            <div class="aries-metrics-row">
+              <div class="aries-metric-col">
+                <span class="aries-metric-val">99.99<span>%</span></span>
+                <span class="aries-metric-lbl">星光物理专线SLA</span>
+              </div>
+              <div class="aries-metric-col">
+                <span class="aries-metric-val">150<span>+</span></span>
+                <span class="aries-metric-lbl">全球星宿接入中继</span>
+              </div>
+              <div class="aries-metric-col">
+                <span class="aries-metric-val">&lt; 2<span>min</span></span>
+                <span class="aries-metric-lbl">白羊工单即时响应</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero 右侧：白羊星座天象动效 -->
+          <div class="aries-star-stage">
+            <svg class="aries-star-svg" viewBox="0 0 440 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="白羊星宿星座天象连线动图">
+              <defs>
+                <radialGradient id="ariesNebulaGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.85"/>
+                  <stop offset="45%" stop-color="#818cf8" stop-opacity="0.4"/>
+                  <stop offset="85%" stop-color="#0f172a" stop-opacity="0.1"/>
+                  <stop offset="100%" stop-color="#070a13" stop-opacity="0"/>
+                </radialGradient>
+                <linearGradient id="constellationBeam" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fbbf24"/>
+                  <stop offset="50%" stop-color="#f43f5e"/>
+                  <stop offset="100%" stop-color="#818cf8"/>
+                </linearGradient>
+                <linearGradient id="ramHornGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.7"/>
+                  <stop offset="50%" stop-color="#f43f5e" stop-opacity="0.85"/>
+                  <stop offset="100%" stop-color="#818cf8" stop-opacity="0.7"/>
+                </linearGradient>
+              </defs>
+
+              <!-- 深空星云背景微光 -->
+              <circle cx="220" cy="180" r="145" fill="url(#ariesNebulaGlow)" class="aries-nebula-pulse"/>
+
+              <!-- 背景散落闪烁星芒 (Twinkling Starlight) -->
+              <circle cx="90" cy="100" r="1.8" fill="#ffffff" class="twinkle-star-a"/>
+              <circle cx="340" cy="90" r="2.2" fill="#fbbf24" class="twinkle-star-b"/>
+              <circle cx="360" cy="240" r="1.5" fill="#818cf8" class="twinkle-star-c"/>
+              <circle cx="80" cy="260" r="2.0" fill="#ffffff" class="twinkle-star-b"/>
+              <circle cx="140" cy="70" r="2.5" fill="#fb7185" class="twinkle-star-a"/>
+              <circle cx="300" cy="310" r="1.8" fill="#fbbf24" class="twinkle-star-c"/>
+
+              <!-- 天球仪经纬刻度慢速旋转环 (Astrolabe Ring) -->
+              <g class="aries-astrolabe-spin">
+                <circle cx="220" cy="180" r="135" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.4"/>
+                <circle cx="220" cy="180" r="110" stroke="#818cf8" stroke-width="1.2" stroke-dasharray="16 12" opacity="0.5"/>
+                <!-- 刻度点 -->
+                <circle cx="220" cy="45" r="4" fill="#fbbf24"/>
+                <circle cx="355" cy="180" r="4" fill="#f43f5e"/>
+                <circle cx="220" cy="315" r="4" fill="#818cf8"/>
+                <circle cx="85" cy="180" r="4" fill="#fbbf24"/>
+              </g>
+
+              <!-- 白羊神圣星角辉光轮廓 (Celestial Ram Horns Aura) -->
+              <g class="aries-ram-horns">
+                <!-- 左羊角螺旋光线 -->
+                <path d="M220 200 C200 160, 160 145, 135 170 C110 195, 125 235, 155 235 C175 235, 190 220, 185 205 C180 190, 165 190, 160 200" stroke="url(#ramHornGrad)" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.75"/>
+                <!-- 右羊角螺旋光线 -->
+                <path d="M220 200 C240 160, 280 145, 305 170 C330 195, 315 235, 285 235 C265 235, 250 220, 255 205 C260 190, 275 190, 280 200" stroke="url(#ramHornGrad)" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.75"/>
+              </g>
+
+              <!-- 白羊座核心星座连线与星宿主星 (Aries Constellation Asterism) -->
+              <g class="aries-constellation-main">
+                <!-- 静态骨架线 -->
+                <line x1="140" y1="160" x2="210" y2="125" stroke="#f43f5e" stroke-width="2" opacity="0.4"/>
+                <line x1="210" y1="125" x2="285" y2="175" stroke="#f43f5e" stroke-width="2" opacity="0.4"/>
+                <line x1="285" y1="175" x2="245" y2="240" stroke="#f43f5e" stroke-width="2" opacity="0.4"/>
+
+                <!-- 动态射流星光脉冲 (Flowing Starlight Beams) -->
+                <line x1="140" y1="160" x2="210" y2="125" stroke="url(#constellationBeam)" stroke-width="3" stroke-linecap="round" class="star-beam-pulse-1"/>
+                <line x1="210" y1="125" x2="285" y2="175" stroke="url(#constellationBeam)" stroke-width="3" stroke-linecap="round" class="star-beam-pulse-2"/>
+                <line x1="285" y1="175" x2="245" y2="240" stroke="url(#constellationBeam)" stroke-width="3" stroke-linecap="round" class="star-beam-pulse-3"/>
+
+                <!-- 主星 1: Hamal 娄宿三 (α Arietis 最亮金星) -->
+                <g class="star-hamal">
+                  <circle cx="210" cy="125" r="18" fill="#fbbf24" opacity="0.25" class="star-pulse-ring"/>
+                  <circle cx="210" cy="125" r="9" fill="#fbbf24" filter="drop-shadow(0 0 10px #fbbf24)"/>
+                  <circle cx="210" cy="125" r="4.5" fill="#ffffff"/>
+                  <text x="210" y="105" fill="#fde047" font-size="11" font-weight="700" text-anchor="middle">α 娄宿三 Hamal</text>
+                </g>
+
+                <!-- 主星 2: Sheratan 娄宿一 (β Arietis) -->
+                <g class="star-sheratan">
+                  <circle cx="140" cy="160" r="14" fill="#f43f5e" opacity="0.25" class="star-pulse-ring-slow"/>
+                  <circle cx="140" cy="160" r="7.5" fill="#f43f5e" filter="drop-shadow(0 0 8px #f43f5e)"/>
+                  <circle cx="140" cy="160" r="3.5" fill="#ffffff"/>
+                  <text x="120" y="185" fill="#fca5a5" font-size="10" font-weight="600" text-anchor="middle">β 娄宿一</text>
+                </g>
+
+                <!-- 主星 3: Mesarthim 娄宿二 (γ Arietis 双星) -->
+                <g class="star-mesarthim">
+                  <circle cx="285" cy="175" r="14" fill="#818cf8" opacity="0.25" class="star-pulse-ring"/>
+                  <circle cx="285" cy="175" r="7.5" fill="#818cf8" filter="drop-shadow(0 0 8px #818cf8)"/>
+                  <circle cx="285" cy="175" r="3.5" fill="#ffffff"/>
+                  <text x="315" y="195" fill="#c7d2fe" font-size="10" font-weight="600" text-anchor="middle">γ 娄宿二</text>
+                </g>
+
+                <!-- 主星 4: 41 Arietis 胃宿三 -->
+                <g class="star-bharani">
+                  <circle cx="245" cy="240" r="6" fill="#fb7185" filter="drop-shadow(0 0 6px #fb7185)"/>
+                  <circle cx="245" cy="240" r="2.5" fill="#ffffff"/>
+                  <text x="245" y="260" fill="#fecdd3" font-size="9" text-anchor="middle">41 Ari 胃宿三</text>
+                </g>
+              </g>
+
+              <!-- 悬浮状态标签 -->
+              <g class="aries-status-tag">
+                <rect x="125" y="380" width="190" height="26" rx="13" fill="#0f172a" stroke="#f43f5e" stroke-width="1.2" opacity="0.9"/>
+                <circle cx="140" cy="393" r="3.5" fill="#fbbf24" class="aries-dot-blink"/>
+                <text x="152" y="397" fill="#fecdd3" font-size="11" font-weight="600" letter-spacing="0.5">白羊星 · 星宿全域专线</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第一功能区：系统教程 -->
+    <section id="tutorial" class="aries-section">
+      <div class="aries-container">
+        <div class="aries-sec-header">
+          <span class="aries-sec-pill">SYSTEM TUTORIALS</span>
+          <h2 class="aries-sec-title">四大主流系统极速部署教程</h2>
+          <p class="aries-sec-desc">
+            覆盖 Windows、macOS、iOS、Android 及 Linux 软路由，全面支持通用订阅标准与增强虚拟网卡模式，一步配置完成。
+          </p>
+        </div>
+
+        <div class="tutorial-grid">
+          <div class="tutorial-card">
+            <div class="tutorial-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>
+            </div>
+            <h3 class="tutorial-card-title">Windows 极速安装</h3>
+            <p class="tutorial-card-text">
+              支持 Clash Verge Rev 与 Sing-box GUI。内置白羊星专用规则集，一键启用 Tun 虚拟网卡接管全部后台网络，畅享低时延游戏与开发环境。
+            </p>
+          </div>
+
+          <div class="tutorial-card">
+            <div class="tutorial-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20.94c1.88 0 3.82-.48 5.6-1.44a10.03 10.03 0 0 0 4.46-5.83 10.15 10.15 0 0 0-.66-7.85 10.22 10.22 0 0 0-6.17-5.06 10.5 10.5 0 0 0-6.46.22 10.3 10.3 0 0 0-5.4 4.54 10.08 10.08 0 0 0-1.37 7.74c.78 3.03 2.8 5.6 5.56 7.02 1.37.7 2.89 1.06 4.47 1.06z"/></svg>
+            </div>
+            <h3 class="tutorial-card-title">macOS 尊享调优</h3>
+            <p class="tutorial-card-text">
+              完美适配 Apple Silicon 芯片原生架构。配合系统守护进程权限，实现极低耗电与编译资源并行拉取，Homebrew 与 Docker 镜像极速构建。
+            </p>
+          </div>
+
+          <div class="tutorial-card">
+            <div class="tutorial-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="3"/><circle cx="12" cy="18" r="1"/></svg>
+            </div>
+            <h3 class="tutorial-card-title">iOS 移动端畅享</h3>
+            <p class="tutorial-card-text">
+              全面兼容 Shadowrocket、Quantumult X 与 Loon。支持根据当前网络环境智能切换直连与节点，在蜂窝移动网络下实现无缝自动保活。
+            </p>
+          </div>
+
+          <div class="tutorial-card">
+            <div class="tutorial-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="8" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="18" r="2"/></svg>
+            </div>
+            <h3 class="tutorial-card-title">Android / 软路由</h3>
+            <p class="tutorial-card-text">
+              支持 Clash Meta for Android 与 OpenWrt 旁路透明代理。家庭与企业局域网所有设备无需重复安装客户端，全量免密秒速出海。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第二功能区：白羊星宿故障智能诊所 -->
+    <section id="diagnostics" class="aries-section table-row-alt">
+      <div class="aries-container">
+        <div class="aries-sec-header">
+          <span class="aries-sec-pill">ASTRA CLINIC</span>
+          <h2 class="aries-sec-title">白羊星宿故障智能诊所</h2>
+          <p class="aries-sec-desc">
+            遇到节点变红或拉取配置失败？按照白羊星宿自愈排查路径，快速诊断并恢复高速连接。
+          </p>
+        </div>
+
+        <div class="clinic-grid">
+          <div class="clinic-card">
+            <span class="clinic-badge">诊室排查 · 01</span>
+            <h3 class="clinic-title">节点测速全部超时</h3>
+            <p class="clinic-desc">
+              检查本地时钟授时误差是否超过 1 分钟。TLS 与现代加密握手依赖绝对时间戳，时钟偏差过大将直接导致服务端鉴权失败并拒绝连接。
+            </p>
+          </div>
+
+          <div class="clinic-card">
+            <span class="clinic-badge">诊室排查 · 02</span>
+            <h3 class="clinic-title">TLS 握手校验中断</h3>
+            <p class="clinic-desc">
+              多发生于企业或校园网络环境中。若存在内网防火墙 SSL 中间人探测，可在客户端临时启用跳过证书校验，或手动更新系统根证书库。
+            </p>
+          </div>
+
+          <div class="clinic-card">
+            <span class="clinic-badge">诊室排查 · 03</span>
+            <h3 class="clinic-title">局域网共享无法访问</h3>
+            <p class="clinic-desc">
+              在客户端中勾选“允许来自局域网的连接”，并在 Windows 防火墙入站规则中放行对应的混合端口，确保同局域网设备能够正常代工转发。
+            </p>
+          </div>
+
+          <div class="clinic-card">
+            <span class="clinic-badge">诊室排查 · 04</span>
+            <h3 class="clinic-title">UDP 流量被网关丢弃</h3>
+            <p class="clinic-desc">
+              若在音视频通话或联机游戏时遇到延迟剧烈抖动，建议在客户端高级设置中关闭 QUIC 并强制走 TCP 代理通道，规避运营商对 UDP 的粗暴 QoS 限制。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第三功能区：星光专线支持方案选型 -->
+    <section id="pricing" class="aries-section">
+      <div class="aries-container">
+        <div class="aries-sec-header">
+          <span class="aries-sec-pill">CONSTELLATION TIERS</span>
+          <h2 class="aries-sec-title">白羊星光专线方案选型</h2>
+          <p class="aries-sec-desc">
+            基于原生骨干 IPLC 物理专线与 Anycast 智能中继，提供高可靠、低延迟的全天候高速互联。
+          </p>
+        </div>
+
+        <div class="star-pricing-grid">
+          <!-- 方案 1 -->
+          <div class="star-price-card">
+            <h3 class="star-p-name">初星体验版</h3>
+            <p class="star-p-intro">适合轻量级跨国学术检索、外贸商务邮件及主流社交沟通</p>
+            <div class="star-p-box">
+              <span class="star-p-curr">¥</span>
+              <span class="star-p-val">19</span>
+              <span class="star-p-period">/ 月</span>
+            </div>
+            <ul class="star-p-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>每月 150GB 优质高速流量</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>覆盖 25+ 亚太与欧美骨干节点</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>最高 350Mbps 突发端口速率</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>支持 3 台设备同时在线</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>白羊星客标准工单技术保障</li>
+            </ul>
+            <div class="star-p-action">
+              <a href="https://ww012.twilightaff.com/#/?code=A56DH1Af" target="_blank" rel="nofollow" class="btn-aries btn-aries-outline">立即开通</a>
+            </div>
+          </div>
+
+          <!-- 方案 2 (推荐) -->
+          <div class="star-price-card star-price-featured">
+            <div class="star-price-flag">白羊主推 · 旗舰专线</div>
+            <h3 class="star-p-name">织女进阶版</h3>
+            <p class="star-p-intro">专为 4K/8K 超高清流媒体无缓冲播放、大模型交互与远程代码调试打造</p>
+            <div class="star-p-box">
+              <span class="star-p-curr">¥</span>
+              <span class="star-p-val">39</span>
+              <span class="star-p-period">/ 月</span>
+            </div>
+            <ul class="star-p-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>每月 420GB 全物理专线流量</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>覆盖 90+ 全球超清流媒体解锁节点</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>千兆 1000Mbps 端口峰值带宽</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>支持 6 台终端多并发畅联</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>优先工单支持与星宿专属链路调优</li>
+            </ul>
+            <div class="star-p-action">
+              <a href="https://ww012.twilightaff.com/#/?code=A56DH1Af" target="_blank" rel="nofollow" class="btn-aries btn-aries-primary">立刻开通尊享</a>
+            </div>
+          </div>
+
+          <!-- 方案 3 -->
+          <div class="star-price-card">
+            <h3 class="star-p-name">昂宿极速版</h3>
+            <p class="star-p-intro">为跨国工作室、跨境电商品牌运营团队及多端高并发协同量身定制</p>
+            <div class="star-p-box">
+              <span class="star-p-curr">¥</span>
+              <span class="star-p-val">89</span>
+              <span class="star-p-period">/ 月</span>
+            </div>
+            <ul class="star-p-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>每月 1200GB 纯物理企业专网</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>全原生双 ISP 家宽纯净 IP 赋能</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>无限突发吞吐与专属物理隔离通道</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>支持 16 台设备无阻并发在线</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>7×24 小时一对一专家技术护航</li>
+            </ul>
+            <div class="star-p-action">
+              <a href="https://ww012.twilightaff.com/#/?code=A56DH1Af" target="_blank" rel="nofollow" class="btn-aries btn-aries-outline">开通企业版</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第四功能区：星宿高频疑难答辩 (FAQ) -->
+    <section id="faq" class="aries-section table-row-alt">
+      <div class="aries-container">
+        <div class="aries-sec-header">
+          <span class="aries-sec-pill">CONSTELLATION FAQ</span>
+          <h2 class="aries-sec-title">星宿高频疑难答辩</h2>
+          <p class="aries-sec-desc">
+            整理自白羊星技术支持平台真实工单与社区高频疑问，解答您在配置与调优中的核心疑虑。
+          </p>
+        </div>
+
+        <div class="aries-faq-grid">
+          <details class="aries-faq-box" open>
+            <summary class="aries-faq-q">
+              <span class="aries-faq-q-text">
+                <span class="aries-faq-badge">Q1:</span> 为什么客户端导入订阅后显示网络不可达？
+              </span>
+              <span class="aries-faq-arrow">▼</span>
+            </summary>
+            <p class="aries-faq-a">
+              通常是由于本地系统开启了其他第三方杀毒软件或网络过滤扩展。请暂时关闭相关软件，并在客户端设置中手动测试能否解析订阅域名，必要时可更换备用订阅链接。
+            </p>
+          </details>
+
+          <details class="aries-faq-box">
+            <summary class="aries-faq-q">
+              <span class="aries-faq-q-text">
+                <span class="aries-faq-badge">Q2:</span> 节点状态正常为何打开特定网站提示403？
+              </span>
+              <span class="aries-faq-arrow">▼</span>
+            </summary>
+            <p class="aries-faq-a">
+              部分国际网站对高频访问的公共云机房 IP 设有速率限制。建议在客户端节点列表中切换为标有“流媒体”或“纯净住宅”字样的专属节点，即可顺利通过安全验证。
+            </p>
+          </details>
+
+          <details class="aries-faq-box">
+            <summary class="aries-faq-q">
+              <span class="aries-faq-q-text">
+                <span class="aries-faq-badge">Q3:</span> 如何在路由器后台实现白名单无感分流？
+              </span>
+              <span class="aries-faq-arrow">▼</span>
+            </summary>
+            <p class="aries-faq-a">
+              在软路由固件中将白羊星订阅导入 OpenClash 或 Passwall，并将运行模式设置为“绕过大陆IP”或“GFW模式”，路由器会自动根据目标IP分流，国内流量完全直连不受影响。
+            </p>
+          </details>
+
+          <details class="aries-faq-box">
+            <summary class="aries-faq-q">
+              <span class="aries-faq-q-text">
+                <span class="aries-faq-badge">Q4:</span> 晚高峰期间测速带宽为何会发生轻微波动？
+              </span>
+              <span class="aries-faq-arrow">▼</span>
+            </summary>
+            <p class="aries-faq-a">
+              晚高峰国际出口公网拥堵严重，但白羊星主要节点均运行在 IPLC 物理光纤专线上，不经过公网国际互联点。若遇波动，智能中枢会在毫秒内将流量自动调度至备用 BGP 路由。
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第五功能区：极客与团队口碑 -->
+    <section id="reviews" class="aries-section">
+      <div class="aries-container">
+        <div class="aries-sec-header">
+          <span class="aries-sec-pill">GEEK REVIEWS</span>
+          <h2 class="aries-sec-title">极客与出海团队真实口碑</h2>
+          <p class="aries-sec-desc">
+            来自全国软件工程师、跨国电商团队及多媒体创作者的真实运行评价。
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <p class="review-quote">
+              “作为一名全栈开发者，我经常需要在本地拉取海外开源大模型权重。白羊星的物理专线带宽非常稳定，千兆带宽直接跑满，遇到分流问题工单也是秒回，极为省心。”
+            </p>
+            <div class="review-user">
+              <div class="review-avatar">方</div>
+              <div>
+                <div class="review-name">方工</div>
+                <div class="review-role">大模型系统工程师 · 杭州</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <p class="review-quote">
+              “白羊星帮助中心的 MTU/MSS 切分调优文档帮了大忙！之前我们跨洋视频会议总出现偶发丢包黑屏，按照文档调整了网卡 MTU 后，丢包率直接归零，团队协同效率大增。”
+            </p>
+            <div class="review-user">
+              <div class="review-avatar">陆</div>
+              <div>
+                <div class="review-name">陆经理</div>
+                <div class="review-role">出海跨境运营总监 · 深圳</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <p class="review-quote">
+              “家里电视盒子装了白羊星的旁路由代理，看 4K HDR 视频秒开没有缓冲条。价格实惠且服务非常稳定，是我们玩网络技术群里大家公认最靠谱的专线服务之一。”
+            </p>
+            <div class="review-user">
+              <div class="review-avatar">许</div>
+              <div>
+                <div class="review-name">许先生</div>
+                <div class="review-role">资深数码极客 · 成都</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 底部极简规范页脚：严格只有4个链接 (全中文) -->
+  <footer class="aries-footer">
+    <div class="aries-container">
+      <ul class="aries-footer-nav">
+        <li><a href="sitemap.html">网站地图</a></li>
+        <li><a href="about.html">关于我们</a></li>
+        <li><a href="terms.html">服务条款</a></li>
+        <li><a href="privacy.html">隐私政策</a></li>
+      </ul>
+      <p class="aries-footer-copy">
+        &copy; 2026 白羊星-帮助中心 (baiyangxi.help). 版权所有 · 专注于全协议客户端配置教程与星际网络排障中枢.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
